@@ -5,9 +5,9 @@ LOGFILE="/etc/config/uci-defaults-log.txt"
 uci set firewall.@zone[1].input='ACCEPT'
 
 # 设置主机名映射，解决安卓原生 TV 无法联网的问题
-uci add dhcp domain
-uci set "dhcp.@domain[-1].name=time.android.com"
-uci set "dhcp.@domain[-1].ip=203.107.6.88"
+#uci add dhcp domain
+#uci set "dhcp.@domain[-1].name=time.android.com"
+#uci set "dhcp.@domain[-1].ip=203.107.6.88"
 
 # 检查配置文件是否存在
 SETTINGS_FILE="/etc/config/pppoe-settings"
@@ -101,8 +101,8 @@ uci set dropbear.@dropbear[0].Interface=''
 uci commit
 
 # 设置编译作者信息
-FILE_PATH="/etc/openwrt_release"
-NEW_DESCRIPTION="Packaged by wukongdaily"
-sed -i "s/DISTRIB_DESCRIPTION='[^']*'/DISTRIB_DESCRIPTION='$NEW_DESCRIPTION'/" "$FILE_PATH"
+#FILE_PATH="/etc/openwrt_release"
+#NEW_DESCRIPTION="Packaged by wukongdaily"
+#sed -i "s/DISTRIB_DESCRIPTION='[^']*'/DISTRIB_DESCRIPTION='$NEW_DESCRIPTION'/" "$FILE_PATH"
 
 exit 0
